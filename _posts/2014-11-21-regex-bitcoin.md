@@ -1,4 +1,8 @@
-# Regular Expression to "validate" a Bitcoin address
+---
+layout: post
+title: Regular Expression to "validate" a Bitcoin address
+date: 2014-11-21 00:00:00
+---
 
 The [specs](https://en.bitcoin.it/wiki/Address) of a valid Bitcoin address say:
 

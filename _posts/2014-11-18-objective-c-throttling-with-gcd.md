@@ -1,4 +1,8 @@
-# Throttling a block execution using GCD
+---
+layout: post
+title: Throttling a block execution using GCD
+date: 2014-11-18 00:00:00
+---
 
 I've been using [this category](https://gist.github.com/jwilling/6012128) to throttle a query request to the server, fired from a search bar.
 
