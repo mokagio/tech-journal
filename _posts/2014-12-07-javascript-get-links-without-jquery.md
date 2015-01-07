@@ -30,3 +30,16 @@ external_links.forEach(function(link) {
     link.setAttribute("target", "_blank"); 
 });
 ```
+
+---
+
+**Update:** the snippet above won't work. Check [this post](http://mokagio.github.io/tech-journal/2015/01/07/javascript-NodeList.html) to find out why.
+
+This is the correct version:
+
+```js
+var external_links = document.querySelectorAll('a:not([href^="#"])');
+for (var i = 0; i < external_links.length; i++) {
+   external_links[i].setAttribute("target", "_blank");  
+}
+```
