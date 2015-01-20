@@ -5,6 +5,10 @@ This journal is a collection of short notes on software development topics, base
 
 See it in action! :point_right: http://mokagio.github.io/tech-journal/
 
+## Notes to self
+
+To create a new post run `rake new[post-name-goes-here]
+
 ---
 
 Read more at:
