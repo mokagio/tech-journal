@@ -7,7 +7,11 @@ See it in action! :point_right: http://mokagio.github.io/tech-journal/
 
 ## Notes to self
 
-To create a new post run `rake new[post-name-goes-here]
+To create a new post run `rake new[post-name-goes-here]`
+
+## Commit message template
+
+`Language/Technology: A description of the post`, note how both the language or technology name and the first word after it should be capitalised. Also use `iOS` instead of `ios`.
 
 ---
 
