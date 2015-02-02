@@ -1,6 +1,20 @@
+# Rake's default way to pass arguments to a task, `task[argument]`, is cumbersome
+# With some hacking it's possible to have a cleaner `task argument` syntax
+# More here: https://itshouldbeuseful.wordpress.com/2011/11/07/passing-parameters-to-a-rake-tas    k/
+#
+# We'll use this to do `calabash:test tag` and run only the tagged specs
+def set_no_op_for_arguments(arguments)
+  # skip the first element, which is the task itself
+  for argument in arguments[1..-1] do
+    # create a task that does nothing
+    task argument.to_sym do ; end
+  end
+end
+
 desc "Create a new empty post with the given title"
-task :new, [:title] do |task, args|
-  title = args[:title]
+task :new do |task|
+  set_no_op_for_arguments(ARGV)
+  title = ARGV[1]
   if ! title 
     title = "an-awesome-title" 
   end
