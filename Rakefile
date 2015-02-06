@@ -15,8 +15,8 @@ desc "Create a new empty post with the given title"
 task :new do |task|
   set_no_op_for_arguments(ARGV)
   title = ARGV[1]
-  if ! title 
-    title = "an-awesome-title" 
+  if ! title
+    title = "an-awesome-title"
   end
 
   now = Time.new
@@ -45,4 +45,6 @@ TEMPLATE
   path = "_posts/#{date_string}-#{title}.md"
 
   File.open(path, 'w') {|f| f.write template }
+
+  sh "vim #{path}"
 end
