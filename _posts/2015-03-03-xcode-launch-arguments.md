@@ -1,10 +1,10 @@
 ---
 layout: post
-title: How to access iOS apps' launch argumens and environment variables from code
+title: How to access iOS apps' launch arguments and environment variables from code
 date: 2015-03-03 18:51:42
 ---
 
-It's easy to forget that at the end of the day our apps are process started on the os platform. As such they can be passed launch arguments and environment variables.
+It's easy to forget that at the end of the day our apps are processes started on the OS platform. As such they can be passed launch arguments and environment variables.
 
 ## How to set launch arguments
 
@@ -18,9 +18,9 @@ I'll forward you to the [NSHipster's article](http://nshipster.com/launch-argume
 
 ## How to access launch arguments from code
 
-What's interesting is to have _your own_ arguments or environment variables to use when debugging. For example the reason I found out about this technique is that I needed to programmatically disable the onboarding when running acceptance tests on an app I'm working on.
+What's interesting is using _your own_ arguments or environment variables for debugging. For example the reason I found out about this technique is that I needed to programmatically disable the onboarding when running acceptance tests on an app I'm working on.
 
-As said at the start, our app are processes running on the os, so it makes sense that to access these options we need to use `NSProcessInfo`.
+As mentioned, our apps are processes running on the OS, so it makes sense that to access these options we need to use `NSProcessInfo`.
 
 ```objc
 if ([[[NSProcessInfo processInfo] arguments] containsObject:@"-skip_onboarding"]) {
@@ -49,7 +49,7 @@ if (environment[@"server_url"]) {
 
 It's as simple as this.
 
-### Food for thoughts
+### Food for thought
 
 * Can launch arguments and environment variables be passed/set when using the Xcode command line tools?
 * How does `NSProcessInfo` work? What else can we use it for?
