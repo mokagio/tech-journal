@@ -4,7 +4,7 @@ email: giovanni.lodi42@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This place is a collector of random findings regarding little details of the software development craft.
 baseurl: "/tech-journal"
-url: "http://mokagio.github.com/tech-journal"
+url: "http://mokagio.github.com"
 twitter_username: mokagio
 github_username:  mokagio
 
