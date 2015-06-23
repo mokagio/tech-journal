@@ -15,9 +15,7 @@ desc "Create a new empty post with the given title"
 task :new do |task|
   set_no_op_for_arguments(ARGV)
   title = ARGV[1]
-  if ! title
-    title = "an-awesome-title"
-  end
+  raise "Missing title" unless title
 
   now = Time.new
   month = now.month
